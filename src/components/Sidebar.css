@@ -1,0 +1,142 @@
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-header {
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.studio-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #e8e4dc;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.studio-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: rgba(232, 228, 220, 0.35);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.painting-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1.2rem 2rem;
+  gap: 0.1rem;
+}
+
+.painting-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.65rem 0.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.painting-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.painting-item.active {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.painting-item.painting-subitem.active {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.painting-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 2px;
+  height: 50%;
+  background: rgba(232, 228, 220, 0.55);
+  border-radius: 1px;
+  transition: transform 0.25s ease;
+}
+
+.painting-item.active::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+.painting-item.painting-subitem.active::before {
+  background: rgba(232, 228, 220, 0.25);
+}
+
+.painting-number {
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: rgba(232, 228, 220, 0.22);
+  letter-spacing: 0.1em;
+  min-width: 18px;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.painting-item.active .painting-number,
+.painting-item:hover .painting-number {
+  color: rgba(232, 228, 220, 0.5);
+}
+
+.painting-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(232, 228, 220, 0.4);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.painting-item:hover .painting-name,
+.painting-item.active .painting-name {
+  color: rgba(232, 228, 220, 0.9);
+}
+
+.about-item .painting-name {
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nav-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0.6rem 0.8rem 0.9rem;
+}
+

@@ -1,0 +1,126 @@
+.painting-card {
+  padding: 8vh 7vw 12vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.painting-card:first-child {
+  padding-top: 12vh;
+}
+
+.painting-card:last-child {
+  border-bottom: none;
+  padding-bottom: 18vh;
+}
+
+.painting-layout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.painting-layout.portrait {
+  flex-direction: row;
+  gap: 4vw;
+}
+
+.painting-layout.landscape {
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.painting-image-wrapper {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 1px;
+  cursor: zoom-in;
+}
+
+.portrait .painting-image-wrapper {
+  width: 38%;
+}
+
+.landscape .painting-image-wrapper {
+  width: 100%;
+  max-width: 680px;
+}
+
+.painting-image {
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.painting-image.revealed {
+  transform: translateY(0);
+}
+
+.painting-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.painting-meta {
+  flex: 1;
+  min-width: 0;
+  padding-top: 0.5rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease 0.55s, transform 0.7s ease 0.55s;
+}
+
+.painting-meta.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .painting-layout.portrait {
+    flex-direction: column;
+  }
+  .portrait .painting-image-wrapper {
+    width: 100%;
+  }
+  .painting-meta {
+    padding-top: 0;
+    margin-top: 1.5rem;
+  }
+}
+
+.meta-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.meta-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.42);
+  letter-spacing: 0.06em;
+}
+
+.dot {
+  color: rgba(26, 26, 26, 0.18);
+}
+
+.meta-description {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.52);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  max-width: 52ch;
+}
