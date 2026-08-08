@@ -28,7 +28,7 @@ export default function About() {
           <div className="about-image-wrapper">
             <div className="about-image">
               <img
-                src="/images/artist.jpg"
+                src={import.meta.env.BASE_URL + 'images/artist.jpg'}
                 alt="Vijay Jadhav"
                 className="about-photo"
                 onError={e => { e.currentTarget.style.display = 'none' }}

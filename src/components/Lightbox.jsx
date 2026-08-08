@@ -38,7 +38,7 @@ export default function Lightbox({ painting, onClose }) {
 
         <div className="lightbox-image-wrap">
           <img
-            src={painting.image}
+            src={import.meta.env.BASE_URL + painting.image.slice(1)}
             alt={painting.title}
             className="lightbox-image"
             style={{ background: painting.gradient }}

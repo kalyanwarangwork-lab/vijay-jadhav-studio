@@ -45,7 +45,7 @@ export default function PaintingCard({ painting, onOpen }) {
             style={{ background: painting.gradient }}
           >
             <img
-              src={painting.image}
+              src={import.meta.env.BASE_URL + painting.image.slice(1)}
               alt={painting.title}
               className="painting-photo"
               onError={e => { e.currentTarget.style.display = 'none' }}
