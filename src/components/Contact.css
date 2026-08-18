@@ -1,0 +1,176 @@
+.contact {
+  min-height: 100vh;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  padding: 10vh 7vw;
+}
+
+.contact-inner {
+  width: 100%;
+  display: flex;
+  gap: 8vw;
+  align-items: flex-start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.contact-inner.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left text column */
+.contact-text-col {
+  flex-shrink: 0;
+  width: min(340px, 38%);
+  padding-top: 0.4rem;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.38);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+  margin-bottom: 1.6rem;
+}
+
+.contact-bio {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.58);
+  line-height: 1.85;
+  max-width: 36ch;
+}
+
+/* Right form column */
+.contact-form-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.form-row .form-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-label {
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.4);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(26, 26, 26, 0.04);
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  border-radius: 2px;
+  padding: 0.75rem 0.9rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  resize: none;
+}
+
+.form-input::placeholder {
+  color: rgba(26, 26, 26, 0.28);
+}
+
+.form-input:focus {
+  border-color: rgba(26, 26, 26, 0.35);
+  background: rgba(26, 26, 26, 0.02);
+}
+
+.form-textarea {
+  min-height: 140px;
+}
+
+.form-submit {
+  align-self: flex-start;
+  padding: 0.75rem 2.2rem;
+  background: #1a1a1a;
+  color: rgba(232, 228, 220, 0.92);
+  border: none;
+  border-radius: 2px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.form-submit:hover {
+  background: #2c2c2c;
+}
+
+/* Thank you state */
+.contact-thanks {
+  padding: 3rem 0;
+}
+
+.thanks-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.thanks-sub {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.5);
+}
+
+@media (max-width: 680px) {
+  .contact-inner {
+    flex-direction: column;
+  }
+
+  .contact-text-col {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,126 +1,64 @@
 .painting-card {
-  padding: 8vh 7vw 12vh;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.painting-card:first-child {
-  padding-top: 12vh;
-}
-
-.painting-card:last-child {
-  border-bottom: none;
-  padding-bottom: 18vh;
-}
-
-.painting-layout {
-  display: flex;
-  align-items: flex-start;
-}
-
-.painting-layout.portrait {
-  flex-direction: row;
-  gap: 4vw;
-}
-
-.painting-layout.landscape {
-  flex-direction: column;
-  gap: 1.6rem;
-}
-
-.painting-image-wrapper {
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 1px;
-  cursor: zoom-in;
-}
-
-.portrait .painting-image-wrapper {
-  width: 38%;
-}
-
-.landscape .painting-image-wrapper {
-  width: 100%;
-  max-width: 680px;
-}
-
-.painting-image {
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
-}
-
-.painting-image.revealed {
-  transform: translateY(0);
-}
-
-.painting-photo {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.painting-meta {
-  flex: 1;
-  min-width: 0;
-  padding-top: 0.5rem;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 2px;
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease 0.55s, transform 0.7s ease 0.55s;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.painting-meta.visible {
+.painting-card.revealed {
   opacity: 1;
   transform: translateY(0);
 }
 
-@media (max-width: 700px) {
-  .painting-layout.portrait {
-    flex-direction: column;
-  }
-  .portrait .painting-image-wrapper {
-    width: 100%;
-  }
-  .painting-meta {
-    padding-top: 0;
-    margin-top: 1.5rem;
-  }
+.painting-card-image-wrap {
+  width: 100%;
+  display: block;
 }
 
-.meta-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.85rem;
-  font-weight: 400;
-  font-style: italic;
-  color: #1a1a1a;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;
+.painting-card-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
 }
 
-.meta-details {
+.painting-card:hover .painting-card-photo {
+  transform: scale(1.04);
+}
+
+.painting-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 0.9rem 0.8rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.58), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.78rem;
-  font-weight: 300;
-  color: rgba(26, 26, 26, 0.42);
-  letter-spacing: 0.06em;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
-.dot {
-  color: rgba(26, 26, 26, 0.18);
+.painting-card:hover .painting-card-overlay {
+  opacity: 1;
 }
 
-.meta-description {
-  margin-top: 1rem;
-  font-size: 0.85rem;
+.painting-card-title {
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.painting-card-year {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.7rem;
   font-weight: 300;
-  color: rgba(26, 26, 26, 0.52);
-  line-height: 1.8;
-  letter-spacing: 0.01em;
-  max-width: 52ch;
+  letter-spacing: 0.1em;
 }

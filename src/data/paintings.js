@@ -1,6 +1,35 @@
+export const projects = [
+  {
+    id: 'commissioned',
+    title: 'Commissioned Work',
+    description: 'Works created on commission — each piece shaped by a conversation between artist and patron.',
+  },
+  {
+    id: 'sacred',
+    title: 'Mythology',
+    description: 'Devotional works rooted in Indian mythology and spiritual tradition.',
+  },
+  {
+    id: 'landscape',
+    title: 'Nature',
+    description: 'Land, water, and sky — the natural world at its most elemental.',
+  },
+  {
+    id: 'abstract',
+    title: 'Abstract',
+    description: 'Form, colour, and feeling freed from representation.',
+  },
+  {
+    id: 'city',
+    title: 'Life & Place',
+    description: 'The energy, colour, and humanity of urban India.',
+  },
+]
+
 export const paintings = [
   {
     id: 1,
+    project: 'sacred',
     title: "The Peacock Prince",
     year: "2019",
     medium: "Oil on Canvas",
@@ -12,6 +41,7 @@ export const paintings = [
   },
   {
     id: 2,
+    project: 'city',
     title: "Navrasa",
     year: "2008",
     medium: "Design & Photography",
@@ -23,6 +53,7 @@ export const paintings = [
   },
   {
     id: 3,
+    project: 'abstract',
     title: "Untitled I",
     year: "2015",
     medium: "Mixed Media",
@@ -34,6 +65,7 @@ export const paintings = [
   },
   {
     id: 4,
+    project: 'abstract',
     title: "Bloom",
     year: "2021",
     medium: "Watercolour",
@@ -45,6 +77,7 @@ export const paintings = [
   },
   {
     id: 5,
+    project: 'landscape',
     title: "Rocky Shore",
     year: "2017",
     medium: "Oil on Canvas",
@@ -56,6 +89,7 @@ export const paintings = [
   },
   {
     id: 6,
+    project: 'landscape',
     title: "The Fort on the Hill",
     year: "2020",
     medium: "Oil on Canvas",
@@ -67,6 +101,7 @@ export const paintings = [
   },
   {
     id: 7,
+    project: 'landscape',
     title: "White Water",
     year: "2018",
     medium: "Oil on Canvas",
@@ -78,6 +113,7 @@ export const paintings = [
   },
   {
     id: 8,
+    project: 'sacred',
     title: "Shri Vitthal",
     year: "2016",
     medium: "Oil on Canvas",
@@ -89,6 +125,7 @@ export const paintings = [
   },
   {
     id: 9,
+    project: 'sacred',
     title: "Nritya Ganapati",
     year: "2022",
     medium: "Acrylic",
@@ -100,6 +137,7 @@ export const paintings = [
   },
   {
     id: 10,
+    project: 'landscape',
     title: "Fallen",
     year: "2019",
     medium: "Oil on Canvas",
@@ -111,6 +149,7 @@ export const paintings = [
   },
   {
     id: 11,
+    project: 'commissioned',
     title: "Two Flamingos",
     year: "2020",
     medium: "Oil on Canvas",
@@ -122,6 +161,7 @@ export const paintings = [
   },
   {
     id: 12,
+    project: 'commissioned',
     title: "The Watchers",
     year: "2018",
     medium: "Oil on Canvas",
@@ -132,18 +172,8 @@ export const paintings = [
     description: "A macaque rests in golden grass while a young orangutan hangs overhead, both gazing outward with calm intelligence. The warm amber background unifies their stillness into something almost contemplative.",
   },
   {
-    id: 13,
-    title: "Forest Light",
-    year: "2021",
-    medium: "Oil on Canvas",
-    dimensions: "24 × 36 in",
-    aspectRatio: "1587/2245",
-    image: "/images/forest-light.png",
-    gradient: "linear-gradient(145deg, #f9e79f 0%, #27ae60 40%, #1a5276 100%)",
-    description: "Two spotted deer stand in a luminous forest clearing, shafts of golden light breaking through tall silent trees. The painting radiates a sense of sanctuary — a world undisturbed and complete.",
-  },
-  {
     id: 14,
+    project: 'city',
     title: "The Working Harbour",
     year: "2023",
     medium: "Oil on Canvas",
@@ -155,6 +185,7 @@ export const paintings = [
   },
   {
     id: 15,
+    project: 'landscape',
     title: "Boats at Rest",
     year: "2017",
     medium: "Oil on Canvas",
@@ -166,6 +197,7 @@ export const paintings = [
   },
   {
     id: 16,
+    project: 'commissioned',
     title: "Walking Together",
     year: "2019",
     medium: "Oil on Canvas",
@@ -177,6 +209,7 @@ export const paintings = [
   },
   {
     id: 17,
+    project: 'commissioned',
     title: "The Solitary Peacock",
     year: "2022",
     medium: "Oil on Canvas",
@@ -188,6 +221,7 @@ export const paintings = [
   },
   {
     id: 18,
+    project: 'commissioned',
     title: "The Jungle's Eye",
     year: "2021",
     medium: "Oil on Canvas",
@@ -198,18 +232,20 @@ export const paintings = [
     description: "A tiger emerges from dense jungle undergrowth, its gaze direct and unhurried, claiming the space with absolute authority. Light filters through bamboo canopy behind it, the forest holding its breath.",
   },
   {
-    id: 19,
-    title: "Old Fellow",
-    year: "2023",
+    id: 13,
+    project: 'commissioned',
+    title: "Forest Light",
+    year: "2021",
     medium: "Oil on Canvas",
-    dimensions: "18 × 24 in",
+    dimensions: "24 × 36 in",
     aspectRatio: "1587/2245",
-    image: "/images/old-fellow.png",
-    gradient: "linear-gradient(145deg, #d5dbdb 0%, #e8b4a0 40%, #7f8c8d 100%)",
-    description: "A close portrait of an English Bulldog painted with loose, generous brushwork that captures both the breed's comic gravity and its unlikely tenderness. The plain background strips away everything but the face.",
+    image: "/images/forest-light.png",
+    gradient: "linear-gradient(145deg, #f9e79f 0%, #27ae60 40%, #1a5276 100%)",
+    description: "Two spotted deer stand in a luminous forest clearing, shafts of golden light breaking through tall silent trees. The painting radiates a sense of sanctuary — a world undisturbed and complete.",
   },
   {
     id: 20,
+    project: 'abstract',
     title: "Mirror & Flame",
     year: "2024",
     medium: "Acrylic on Canvas",
@@ -221,6 +257,7 @@ export const paintings = [
   },
   {
     id: 21,
+    project: 'city',
     title: "Seven White Horses",
     year: "2020",
     medium: "Watercolour",
@@ -232,6 +269,7 @@ export const paintings = [
   },
   {
     id: 22,
+    project: 'city',
     title: "Spirit of Mumbai",
     year: "2023",
     medium: "Wall Mural",
@@ -240,5 +278,17 @@ export const paintings = [
     image: "/images/spirit-of-mumbai.png",
     gradient: "linear-gradient(145deg, #e74c3c 0%, #f39c12 40%, #2980b9 100%)",
     description: "A sprawling mural celebrates the chaos and warmth of Mumbai — the Gateway of India, red double-decker buses, Bollywood, dabbawalas, and the everyday romance of city life. Part of an ongoing engagement with public art.",
+  },
+  {
+    id: 19,
+    project: 'city',
+    title: "Old Fellow",
+    year: "2023",
+    medium: "Oil on Canvas",
+    dimensions: "18 × 24 in",
+    aspectRatio: "1587/2245",
+    image: "/images/old-fellow.png",
+    gradient: "linear-gradient(145deg, #d5dbdb 0%, #e8b4a0 40%, #7f8c8d 100%)",
+    description: "A close portrait of an English Bulldog painted with loose, generous brushwork that captures both the breed's comic gravity and its unlikely tenderness. The plain background strips away everything but the face.",
   },
 ]

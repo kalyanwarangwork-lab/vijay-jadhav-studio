@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react'
 import Sidebar from './components/Sidebar'
 import Gallery from './components/Gallery'
 import Lightbox from './components/Lightbox'
-import { paintings } from './data/paintings'
+import { projects } from './data/paintings'
 import './App.css'
 
 function App() {
@@ -12,7 +12,8 @@ function App() {
   useEffect(() => {
     const sections = [
       { id: 'about', elId: 'about' },
-      ...paintings.map(p => ({ id: p.id, elId: `painting-${p.id}` })),
+      ...projects.map(p => ({ id: p.id, elId: `project-${p.id}` })),
+      { id: 'contact', elId: 'contact' },
     ]
 
     const handleScroll = () => {
@@ -32,7 +33,8 @@ function App() {
 
   const handleSidebarClick = useCallback((id) => {
     setActiveSection(id)
-    const el = document.getElementById(id === 'about' ? 'about' : `painting-${id}`)
+    const elId = id === 'about' ? 'about' : id === 'contact' ? 'contact' : `project-${id}`
+    const el = document.getElementById(elId)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
 
